@@ -1,2 +1,2 @@
 # Cat-and-Physics
-Site for Ph.D. work
+Single Page app for Ph.D. work with tests and info about quantum physics  for high schoolers
