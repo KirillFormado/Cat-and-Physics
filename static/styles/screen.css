@@ -1,0 +1,66 @@
+﻿body {
+	font: large/1.556 "Linux Libertine", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+	word-spacing: 0.1em;
+}
+
+h1, h2, h3, h4 {
+	font-family: "Essays 1743", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+	font-weight: normal;
+	text-transform: uppercase;
+	text-shadow: 0 0 1px #667;
+}
+
+.pf {
+	border: 1px solid;
+	margin: 1.75em 0;
+}
+
+.pf h4 {
+	margin: 0;
+	padding: 4px;
+	background: black;
+	color: white;
+}
+
+.pf .inner {
+	min-height: 253px;
+	margin: 0 15px 0 0;
+	padding: 0 154px 1.75em 0;
+	background: white url(../images/scientist.png) bottom right no-repeat;
+}
+
+/*.break-line {  
+  border-bottom: 3px solid #ffc000;
+}*/
+
+.text-center {
+  text-align: center;
+}
+
+.img-center {
+	display: block;
+	margin: 0 auto;	
+}
+
+.img-size {
+	width: 20%;
+	height: 62px;
+	margin-left: 20px;
+}
+
+.img-size-big {
+	width: 40%;	
+	margin-left: 2%
+}
+
+.margin-top {
+	margin-top : 1em;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+
+
+
