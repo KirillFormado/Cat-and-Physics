@@ -3,7 +3,7 @@
         var CLASSIC_MODE = 'classicMode',
 			INTERACTIVE_MODE = 'interactiveMode',
 			SITE_MODE_KEY = 'siteMode',
-			QUESTION_LIST_ANSWERS = 'questionListAnswers',	
+			QUESTION_LIST_ANSWERS = 'questionListAnswers',				
 			//Page id constants
 			HEADER_ID = '#header',
 			SELECT_MODE_PAGE_ID = '#selectModePage',
@@ -12,7 +12,10 @@
 			WAVE_FUNCTION_PAGE_ID = '#waveFunction',
 			TWO_SLITS_PAGE_ID = '#twoSlits',
 			GOD_PLAY_DICE_ID = '#godPlaysDice',
+			FINAL_TEST_ID = '#finalTest',
 			END_PAGE_ID = '#results',
+			//ids
+			FINAL_TEST_BTN_ID = '#finalTestBtn',
 			//question id constants 
 			NEWTOWNSECONLAW_ID = 'newtownSecondLaw',
 			CAMBIAR_ID = 'cambiar',
@@ -25,6 +28,17 @@
 			content = $('#content'),
 			location = window.location,
 			document = window.document;
+			
+		///////////////////////////////////////
+        // final test button click 
+		$(document).on('click', FINAL_TEST_BTN_ID, function (e){
+			//clear classes
+			$('input[type=radio]').closest('div').attr('class', '');
+			$('html, body').animate({ scrollTop: 0 }, 'fast');
+			$('.alert.alert-info.hide').show();
+			$('input[type=radio]:checked').not('[data-cap-ok]').closest('div').addClass('alert alert-error');			
+			$('input[type=radio][data-cap-ok]').closest('div').addClass('alert alert-success');
+		});
 		
 		///////////////////////////////////////
         // page handlers		        
@@ -136,6 +150,10 @@
 				
 				
 			} else if(currentPageId == GOD_PLAY_DICE_ID) {
+				nextPageId = FINAL_TEST_ID
+				
+				
+			} else if(currentPageId == FINAL_TEST_ID) {
 				nextPageId = END_PAGE_ID
 			}			
 			
